@@ -1,12 +1,8 @@
 # j03l
 
-Este repositorio contiene una aplicación de servidor Express.js con ejercicios prácticos.
+Este repositorio contiene ejercicios básicos de JavaScript.
 
-## Servidor Express
-
-Una configuración básica de servidor Express.js con nodemon para desarrollo.
-
-### Estructura del Proyecto
+## Estructura del Proyecto
 
 ```
 J03lGIt/
@@ -20,94 +16,70 @@ J03lGIt/
 └── README.md
 ```
 
-### Instalación
+## Ejercicios de JavaScript
 
-```bash
-# Instalar dependencias
-npm install
+El archivo `src/App.js` contiene 5 ejercicios básicos de JavaScript:
+
+### 1. Suma de Dos Números
+
+```javascript
+// 1. Suma de dos números
+let num1 = 5;
+let num2 = 3;
+let suma = num1 + num2;
+console.log("1. La suma es:", suma);
 ```
 
-### Ejecutar el Servidor
+Este ejercicio muestra cómo sumar dos variables numéricas y mostrar el resultado en la consola.
 
-```bash
-# Ejecutar en modo desarrollo con nodemon (reinicio automático al cambiar archivos)
-npm run dev
+### 2. Verificar si un Número es Par o Impar
 
-# Ejecutar en modo producción
-npm start
-```
-
-## Ejercicios Incluidos
-
-El archivo `src/App.js` contiene 5 ejercicios prácticos implementados como endpoints de API:
-
-### 1. Calculadora Básica
-
-**Endpoint:** `GET /ejercicios/calculadora`
-
-**Parámetros:**
-- `operacion`: Tipo de operación (suma, resta, multiplicacion, division)
-- `num1`: Primer número
-- `num2`: Segundo número
-
-**Ejemplo:**
-```
-GET /ejercicios/calculadora?operacion=suma&num1=5&num2=3
-```
-
-### 2. Verificador de Palíndromos
-
-**Endpoint:** `GET /ejercicios/palindromo/:texto`
-
-**Parámetros:**
-- `texto`: Texto a verificar si es palíndromo
-
-**Ejemplo:**
-```
-GET /ejercicios/palindromo/anitalavalatina
-```
-
-### 3. Generador de Números Aleatorios
-
-**Endpoint:** `GET /ejercicios/aleatorio`
-
-**Parámetros:**
-- `min`: Valor mínimo (por defecto: 1)
-- `max`: Valor máximo (por defecto: 100)
-- `cantidad`: Cantidad de números a generar (por defecto: 1)
-
-**Ejemplo:**
-```
-GET /ejercicios/aleatorio?min=1&max=10&cantidad=5
-```
-
-### 4. Conversor de Temperatura
-
-**Endpoint:** `GET /ejercicios/temperatura`
-
-**Parámetros:**
-- `valor`: Valor de temperatura a convertir
-- `de`: Unidad original (celsius, fahrenheit, kelvin)
-- `a`: Unidad destino (celsius, fahrenheit, kelvin)
-
-**Ejemplo:**
-```
-GET /ejercicios/temperatura?valor=30&de=celsius&a=fahrenheit
-```
-
-### 5. Contador de Palabras y Caracteres
-
-**Endpoint:** `POST /ejercicios/contador`
-
-**Cuerpo de la solicitud:**
-```json
-{
-  "texto": "Este es un ejemplo de texto para contar palabras y caracteres"
+```javascript
+// 2. Verificar si un número es par o impar
+let numero = 8;
+if (numero % 2 === 0) {
+  console.log("2. " + numero + " es par");
+} else {
+  console.log("2. " + numero + " es impar");
 }
 ```
 
-**Respuesta:**
-Devuelve estadísticas sobre el texto: número de caracteres, caracteres sin espacios, palabras y líneas.
+Este ejercicio utiliza el operador módulo (%) para determinar si un número es par o impar. Si el resto de la división por 2 es 0, el número es par.
+
+### 3. Recorrer un Array con un Bucle For
+
+```javascript
+// 3. Recorrer un array con un for
+let frutas = ["manzana", "banana", "naranja"];
+console.log("3. Lista de frutas:");
+for (let i = 0; i < frutas.length; i++) {
+  console.log("- " + frutas[i]);
+}
+```
+
+Este ejercicio muestra cómo recorrer un array utilizando un bucle for tradicional y mostrar cada elemento en la consola.
+
+### 4. Contar Letras en una Palabra
+
+```javascript
+// 4. Contar letras en una palabra
+let palabra = "javascript";
+console.log("4. La palabra '" + palabra + "' tiene " + palabra.length + " letras");
+```
+
+Este ejercicio utiliza la propiedad `length` para contar el número de caracteres en una cadena de texto.
+
+### 5. Función que Saluda con el Nombre
+
+```javascript
+// 5. Función que saluda con el nombre que le pases
+function saludar(nombre) {
+  console.log("5. Hola, " + nombre + "!");
+}
+saludar("Carlos");
+```
+
+Este ejercicio muestra cómo definir una función que acepta un parámetro y la llama con un argumento específico.
 
 ## Configuración
 
@@ -127,3 +99,4 @@ La configuración del servidor se almacena en `src/config/app.config.js`. Puedes
 - Soporte CORS
 - Nodemon para desarrollo
 - 5 ejercicios prácticos implementados
+
