@@ -1,12 +1,12 @@
 # j03l
 
-This repository contains an Express.js server application.
+Este repositorio contiene una aplicación de servidor Express.js con ejercicios prácticos.
 
-## Express Server
+## Servidor Express
 
-A basic Express.js server setup with nodemon for development.
+Una configuración básica de servidor Express.js con nodemon para desarrollo.
 
-### Project Structure
+### Estructura del Proyecto
 
 ```
 J03lGIt/
@@ -15,48 +15,115 @@ J03lGIt/
 │   │   └── app.config.js
 │   ├── routes/
 │   │   └── index.js
-│   └── index.js
+│   └── App.js
 ├── package.json
 └── README.md
 ```
 
-### Installation
+### Instalación
 
 ```bash
-# Install dependencies
+# Instalar dependencias
 npm install
 ```
 
-### Running the Server
+### Ejecutar el Servidor
 
 ```bash
-# Run in development mode with nodemon (auto-restart on file changes)
+# Ejecutar en modo desarrollo con nodemon (reinicio automático al cambiar archivos)
 npm run dev
 
-# Run in production mode
+# Ejecutar en modo producción
 npm start
 ```
 
-### API Endpoints
+## Ejercicios Incluidos
 
-- `GET /`: Home page with server status
-- `GET /api/v1/`: API welcome message
-- `GET /api/v1/status`: Server status information
+El archivo `src/App.js` contiene 5 ejercicios prácticos implementados como endpoints de API:
 
-### Configuration
+### 1. Calculadora Básica
 
-Server configuration is stored in `src/config/app.config.js`. You can modify settings like:
+**Endpoint:** `GET /ejercicios/calculadora`
 
-- Port number
-- API prefix
-- CORS settings
-- Environment settings
+**Parámetros:**
+- `operacion`: Tipo de operación (suma, resta, multiplicacion, division)
+- `num1`: Primer número
+- `num2`: Segundo número
 
-### Features
+**Ejemplo:**
+```
+GET /ejercicios/calculadora?operacion=suma&num1=5&num2=3
+```
 
-- Express.js server setup
-- API routing structure
-- Configuration management
-- Error handling middleware
-- CORS support
-- Nodemon for development
+### 2. Verificador de Palíndromos
+
+**Endpoint:** `GET /ejercicios/palindromo/:texto`
+
+**Parámetros:**
+- `texto`: Texto a verificar si es palíndromo
+
+**Ejemplo:**
+```
+GET /ejercicios/palindromo/anitalavalatina
+```
+
+### 3. Generador de Números Aleatorios
+
+**Endpoint:** `GET /ejercicios/aleatorio`
+
+**Parámetros:**
+- `min`: Valor mínimo (por defecto: 1)
+- `max`: Valor máximo (por defecto: 100)
+- `cantidad`: Cantidad de números a generar (por defecto: 1)
+
+**Ejemplo:**
+```
+GET /ejercicios/aleatorio?min=1&max=10&cantidad=5
+```
+
+### 4. Conversor de Temperatura
+
+**Endpoint:** `GET /ejercicios/temperatura`
+
+**Parámetros:**
+- `valor`: Valor de temperatura a convertir
+- `de`: Unidad original (celsius, fahrenheit, kelvin)
+- `a`: Unidad destino (celsius, fahrenheit, kelvin)
+
+**Ejemplo:**
+```
+GET /ejercicios/temperatura?valor=30&de=celsius&a=fahrenheit
+```
+
+### 5. Contador de Palabras y Caracteres
+
+**Endpoint:** `POST /ejercicios/contador`
+
+**Cuerpo de la solicitud:**
+```json
+{
+  "texto": "Este es un ejemplo de texto para contar palabras y caracteres"
+}
+```
+
+**Respuesta:**
+Devuelve estadísticas sobre el texto: número de caracteres, caracteres sin espacios, palabras y líneas.
+
+## Configuración
+
+La configuración del servidor se almacena en `src/config/app.config.js`. Puedes modificar ajustes como:
+
+- Número de puerto
+- Prefijo de API
+- Configuración CORS
+- Ajustes de entorno
+
+## Características
+
+- Configuración de servidor Express.js
+- Estructura de rutas API
+- Gestión de configuración
+- Middleware para manejo de errores
+- Soporte CORS
+- Nodemon para desarrollo
+- 5 ejercicios prácticos implementados
