@@ -7,14 +7,12 @@ Este repositorio contiene ejercicios básicos de JavaScript.
 ```
 J03lGIt/
 ├── src/
-│   ├── config/
-│   │   └── app.config.js
-│   ├── routes/
-│   │   └── index.js
-│   └── App.js
-├── package.json
-└── README.md
+│   └── App.js     # Archivo con 5 ejercicios básicos de JavaScript
+├── package.json  # Configuración del proyecto Node.js
+└── README.md    # Este archivo de documentación
 ```
+
+Este repositorio está organizado de manera simple para facilitar el aprendizaje de JavaScript. Contiene ejemplos básicos que pueden ejecutarse directamente en Node.js.
 
 ## Ejercicios de JavaScript
 
