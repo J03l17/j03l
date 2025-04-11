@@ -1,15 +1,16 @@
 # j03l
 
-Este repositorio contiene ejercicios básicos de JavaScript.
+Este repositorio contiene ejercicios básicos y avanzados de JavaScript.
 
 ## Estructura del Proyecto
 
 ```
 J03lGIt/
 ├── src/
-│   └── App.js     # Archivo con 5 ejercicios básicos de JavaScript
-├── package.json  # Configuración del proyecto Node.js
-└── README.md    # Este archivo de documentación
+│   ├── App.js         # Archivo con 5 ejercicios básicos de JavaScript
+│   └── Ejercicios1.js # Archivo con 20 ejercicios de JavaScript
+├── package.json      # Configuración del proyecto Node.js
+└── README.md        # Este archivo de documentación
 ```
 
 Este repositorio está organizado de manera simple para facilitar el aprendizaje de JavaScript. Contiene ejemplos básicos que pueden ejecutarse directamente en Node.js.
@@ -96,5 +97,45 @@ La configuración del servidor se almacena en `src/config/app.config.js`. Puedes
 - Middleware para manejo de errores
 - Soporte CORS
 - Nodemon para desarrollo
-- 5 ejercicios prácticos implementados
+- 5 ejercicios prácticos implementados en App.js
+- 20 ejercicios prácticos implementados en Ejercicios1.js
+
+## Ejercicios Avanzados de JavaScript
+
+El archivo `src/Ejercicios1.js` contiene 20 ejercicios de JavaScript que cubren diversos conceptos:
+
+1. **Sumar elementos de un array** - Uso de reduce para sumar elementos
+2. **Número mayor y menor** - Encontrar valores máximos y mínimos
+3. **Contar elementos pares** - Filtrado de arrays
+4. **Ordenar un array sin .sort()** - Implementación manual de algoritmo de ordenación
+5. **Buscar un elemento** - Búsqueda en arrays
+6. **Revertir un array sin .reverse()** - Inversión manual de arrays
+7. **Convertir nombres a mayúsculas** - Transformación de arrays con map
+8. **Sumar solo los números positivos** - Filtrado y reducción
+9. **Obtener el primer múltiplo de 5** - Búsqueda con condiciones
+10. **Tabla de multiplicar** - Bucles y entrada de usuario
+11. **Generar secuencia de Fibonacci** - Implementación de algoritmos matemáticos
+12. **Adivinar un número** - Juego interactivo con entrada de usuario
+13. **Contar regresivamente** - Bucles while con decremento
+14. **Validar entrada de usuario** - Validación de datos con bucles do-while
+15. **Mostrar menú interactivo** - Interfaz de usuario basada en consola
+16. **Sumar impares con límite** - Bucles con condiciones de parada
+17. **Contador de intentos de login** - Simulación de autenticación
+18. **Sumar hasta que el usuario ingrese 0** - Acumulación con condición de parada
+19. **Serie Fibonacci hasta superar un límite** - Algoritmos con condiciones dinámicas
+20. **Múltiplos de un número hasta un límite** - Generación de secuencias numéricas
+
+### Ejecución de los Ejercicios
+
+Puedes ejecutar los ejercicios individualmente usando npm:
+
+```bash
+# Ejecutar la lista de ejercicios disponibles
+npm run ejercicios
+
+# Ejecutar un ejercicio específico (ejemplo: ejercicio 10)
+npm run ejercicios -- 10
+```
+
+Los ejercicios 1-9 utilizan datos predefinidos, mientras que los ejercicios 10-20 son interactivos y solicitan entrada del usuario a través de la consola.
 
